@@ -6,7 +6,6 @@ from sqlalchemy import null
 
 class Medicamentos(Resource):
 
-
     def get(self):              
         data = {
         "laboratorio": request.args.get('laboratorio'),
@@ -23,31 +22,35 @@ class Medicamentos(Resource):
         if data["laboratorio"] is not None:
             lista_cond.append("LABORATÓRIO")
             data_request = data['laboratorio']
-            df = df.query("LABORATÓRIO==@data_request")
+            if(data_request!=''):
+                df = df.query("LABORATÓRIO==@data_request")
             print(data_request)
         
         if data["produto"] is not None:
             data_request = data["produto"]
-            df = df.query("PRODUTO==@data_request")
+            if(data_request!=''):
+                df = df.query("PRODUTO==@data_request")
             print(data_request)
         
         if data["registro"] is not None:
             lista_cond.append("REGISTRO")
             data_request = data["registro"]
-            df = df.query("REGISTRO==@data_request")
+            if(data_request!=''):
+                df = df.query("REGISTRO==@data_request")
             print(data_request)
-        
-        
+                
         if data["substancia"] is not None:
             lista_cond.append("SUBSTÂNCIA")
             data_request = data["substancia"]
-            df = df.query("SUBSTÂNCIA==@data_request")
+            if(data_request!=''):
+                df = df.query("SUBSTÂNCIA==@data_request")
             print(data_request)
 
         if data["tarja"] is not None:
             lista_cond.append("TARJA")
             data_request = data["tarja"]
-            df = df.query("TARJA==@data_request")
+            if(data_request!=''):
+                df = df.query("TARJA==@data_request")
             print(data_request)
 
         df_1 = df[lista_cond]
@@ -55,6 +58,7 @@ class Medicamentos(Resource):
         parsed = json.loads(result)
         return parsed
         
+
 
 
 ##http://127.0.0.1:5000/medicamentos?substancia=subs1&laboratorio=lab1&produto=prod1&tarja=tarja1&registro=reg1
