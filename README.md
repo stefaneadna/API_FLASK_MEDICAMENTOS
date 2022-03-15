@@ -19,7 +19,7 @@ Todos os filtros são opcionais e podem ser combinados da forma que for mais con
 | produto             | Nome comercial dado ao medicamento                                             | `TALCO ALÍVIO` |
 | registro            | Número de registro de produto junto à ANVISA.                                  | `57600510011`              |
 | substancia          | Substância do produto                                                          | `SALICILATO DE FENILA;ÁCIDO SALICÍLICO;ÓXIDO DE ZINCO;ENXOFRE;MENTOL`|
-| tarja               | Tarja do medicamento                                                           | `Tarja -(*)"` |
+| tarja               | Tarja do medicamento                                                           | `Tarja -(*)` |
 | apresentacao        | Como o medicamento é apresentado                                               | `TALQUEIRA C/ 100 G`|
 | tipoProduto         | categorização do medicamento por tipo de produto                               | `Similar`                 |
 | classeTerapeutica   | Classificação Anatômica de Produtos Farmacêuticos                              | `D10A - ANTIACNEICOS TÓPICOS`                   |
@@ -55,10 +55,15 @@ curl --request GET \
 
 ## Ambiente de Desenvolvimento
 > Todos os comandos devem ser executados no diretório raiz deste projeto
+
 > Utilize o requirements.txt para instalar as dependências desse projeto
-> A API está hospedada no Heroku 
 
 `pip3 install -r requirements.txt` 
+
+
+> A API está hospedada no Heroku 
+
+
 
 #### Execução do projeto
 `python3 app.py`
