@@ -58,13 +58,6 @@ class Medicamentos(Resource):
                 if(data_request!=''):
                     df = df.query("TARJA==@data_request")
                 print(data_request)
-            
-            if data["tarja"] is not None:
-                lista_cond.append("TARJA")
-                data_request = data["tarja"]
-                if(data_request!=''):
-                    df = df.query("TARJA==@data_request")
-                print(data_request)
 
             if data["apresentacao"] is not None:
                 lista_cond.append("APRESENTAÇÃO")

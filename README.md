@@ -24,3 +24,7 @@ Todos os filtros são opcionais e podem ser combinados da forma que for mais con
 | tipoProduto         | categorização do medicamento por tipo de produto                               | `Similar`                 |
 | classeTerapeutica   | Classificação Anatômica de Produtos Farmacêuticos                              | `D10A - ANTIACNEICOS TÓPICOS`                   |
 | restricaoHospitalar | Indica os medicamentos em embalagens hospitalares e deuso restrito a hospitais | `Não`                   |
+
+
+**Exemplo**: 
+- Url com todos os filtros: 

@@ -7,4 +7,4 @@ class Main(Resource):
         "Dataset": "https://dados.gov.br/dataset/preco-de-medicamentos-no-brasil-consumidor",
         "Developer": "Stefane Adna dos Santos"
         }
-        return response_data;
+        return response_data
